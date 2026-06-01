@@ -1,0 +1,32 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb}
+
+
+\title{SINDy}
+
+\begin{document}
+    \section{Introduction}
+        \begin{itemize}
+            \item Introduce the problem with discovering physical systems. Can use the same analogy in the
+            paper of newton vs kepler or find a different one.
+            \item Talk about how using data to find patterns is useful, but we are more interested in finding
+            underlying equations that govern the dynmical systems.
+            \item We can use discovered equation to make
+            predictions in areas where we have never seen data.
+        \end{itemize}
+
+    \section{How it works}
+    \begin{itemize}
+        \item We want to find $f$ for $\dot{x}(t) = f(x(t))$
+        \item We start with $n$ observations of our data $x(t)$ at time points $t_0, t_1, t_2,\dots,t_n$
+        \item We might also have $m$ variables.
+        \item Construct a matrix $X$ of shape $n \times m$, where each row is a snapshot in time, and each
+        column is that state variable. We also compute $\dot{X}$
+        \item We construct a feature library $\Theta(X)$ of shape $n \times p$ where $p$ is the number of
+        candidate functions.
+        \item Candidate functions can consist of many things including $x, x^2, \sin(x), \cos(x),\dots$
+        \item 
+    \end{itemize}
+    \section{Finish with examples, ex lotka volterra}
+\end{document}
